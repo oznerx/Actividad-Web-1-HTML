@@ -18,10 +18,10 @@ function App() {
       <div className='flex flex-col mt-20' id='experience'>
         <h1 className='px-10 py-10 text-blue-500 font-mono text-3xl'>Experience</h1>
         <ul className='px-10 pb-20 text-gray-500 font-mono text-2xl'>
-          <li>Software Developer</li>
-          <li>Data Scientist</li>
-          <li>Portfolio Manager</li>
-          <li>Data Analyst</li>
+          <li>Data Analyst - Present: Working in a Gaming Blockchain Hedge Fund</li>
+          <li>Portfolio Manager - Present: Crypto portfolio manager</li>
+          <li>Data Scientist - 2023: Freelance as DS improving ML trading strategies</li>
+          <li>Software Developer - 2022: Worked in Fundacion Laika</li>
         </ul>
       </div>
 
@@ -30,6 +30,8 @@ function App() {
         <a href='https://www.kaggle.com/justozner' className='py-10'><span className='text-blue-500 font-mono text-3xl'>Kaggle</span></a>
         <a href='https://github.com/oznerx' className='py-10'><span className='text-blue-500 font-mono text-3xl'>Github</span></a>
       </footer>
+
+      <span className='text-gray-400 font-mono text-2xl'>Email: ozneraxelleyva@gmail.com</span>
 
     </div>
   )
