@@ -1,9 +1,9 @@
 "use client"
 
-import { getCharacterById } from "../../services/character";
-import type { Character } from "../../types/characters";
+import { getCharacterById } from "../services/character";
+import type { Character } from "../types/characters";
 import { useEffect, useState } from "react";
-import Header from "../../components/Header";
+import Header from "../components/Header";
 import Image from "next/image";
 
 export default function Character({ params }: { params: { characterId: number } }) {
