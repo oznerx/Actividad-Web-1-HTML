@@ -1,7 +1,7 @@
 "use client"
 
 import CharacterCard from "./components/CharacterCard";
-import { CharacterResponse, getCharacterAtPage, getCharactersFirstPage } from "./services/character";
+import {getCharacterAtPage, getCharactersFirstPage, CharacterResponse } from "./services/character";
 import { useEffect, useState } from "react";
 import Header from "./components/Header";
 
