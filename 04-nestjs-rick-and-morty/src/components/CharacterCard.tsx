@@ -1,24 +1,20 @@
-import { Character } from "../types/characters"
+"use client"
+
+import { Character } from "@/types/characters"
+import { navigateToCharacter } from "../app/actions"
+import { setFavoriteCharacter } from "@/actions/characters"
 import Image from "next/image"
-import { navigateToCharacter } from '../navigation';
 
-export default function CharacterCard({ character, favorites, setFavorites }: { character: Character, favorites: number[], setFavorites: (favorites: number[]) => void }) {
-
-  const handleFavorite = (characterId: number) => {
-
-    if (favorites.find((id) => id === characterId)) {
-      setFavorites(favorites.filter((id) => id !== characterId));
-    } 
-    
-    else {
-      setFavorites([...favorites, characterId]);
-    }
-
-  }
-
+export default function CharacterCard({
+  character,
+  isFavorite,
+}: {
+  character: Character
+  isFavorite: boolean
+}) {
   return (
     <div className="flex flex-col rounded-lg items-center bg-gray-200 overflow-hidden relative p-14 m-10">
-      
+
       <Image src={character.image} height={200} width={200} alt={`${character.name} image`} className="rounded-lg"/>
 
       <div className="text-center mt-7">
@@ -45,12 +41,18 @@ export default function CharacterCard({ character, favorites, setFavorites }: { 
 
       </div>
 
-      <button className="absolute right-10 top-10" onClick={() => handleFavorite(character.id)}>
-
-        <Image src={favorites.find((id) => id === character.id) ? "/filledStar.svg" : "/emptyStar.svg" } height={25} width={25} alt="Favorite" className="transition-opacity duration-200 hover:opacity-50" />
-
+      <button
+        className="absolute right-10 top-10"
+        onClick={() => setFavoriteCharacter(character.id)}
+      >
+        <Image
+          src={isFavorite ? "/filledStar.svg" : "/emptyStar.svg"}
+          height={25}
+          width={25}
+          alt="Favorite"
+          className="transition-opacity duration-200 hover:opacity-50"
+        />
       </button>
-
     </div>
   )
-};
+}
