@@ -14,7 +14,12 @@
     "node": ">=20"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.8.0",
+    "drizzle-orm": "^0.31.2",
     "vercel": "^34.2.0"
   },
-  "packageManager": "npm@10.2.3"
+  "packageManager": "npm@10.2.3",
+  "devDependencies": {
+    "drizzle-kit": "^0.22.7"
+  }
 }
