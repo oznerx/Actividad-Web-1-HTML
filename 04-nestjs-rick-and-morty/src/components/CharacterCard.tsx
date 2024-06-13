@@ -13,32 +13,27 @@ export default function CharacterCard({
   isFavorite: boolean
 }) {
   return (
-    <div className="flex flex-col rounded-lg items-center bg-gray-200 overflow-hidden relative p-14 m-10">
+    <div className="relative m-10 flex flex-col items-center overflow-hidden rounded-lg bg-gray-200 p-14">
+      <Image
+        src={character.image}
+        height={200}
+        width={200}
+        alt={`${character.name} image`}
+        className="rounded-lg"
+      />
 
-      <Image src={character.image} height={200} width={200} alt={`${character.name} image`} className="rounded-lg"/>
-
-      <div className="text-center mt-7">
-
+      <div className="mt-7 text-center">
         <button onClick={() => navigateToCharacter(character.id)}>
-
-          <h1 className="text-gray-400 text-2xl font-bold">
-            {character.name}
-          </h1>
-
+          <h1 className="text-2xl font-bold text-gray-400">{character.name}</h1>
         </button>
 
-        <p className="text-gray-400 pt-4">
+        <p className="pt-4 text-gray-400">
           {character.status} - {character.species}
         </p>
 
-        <p className="text-gray-400">
-          Location: {character.location.name}
-        </p>
+        <p className="text-gray-400">Location: {character.location.name}</p>
 
-        <p className="text-gray-400">
-          Origin: {character.origin.name}
-        </p>
-
+        <p className="text-gray-400">Origin: {character.origin.name}</p>
       </div>
 
       <button

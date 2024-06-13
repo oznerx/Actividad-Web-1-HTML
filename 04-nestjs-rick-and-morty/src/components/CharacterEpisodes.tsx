@@ -12,19 +12,17 @@ export default function CharacterEpisodes({
   }
 
   return (
-    <div className="flex items-center ml-3 mt-5 justify-center">
-
+    <div className="ml-3 mt-5 flex items-center justify-center">
       <ul className="grid grid-flow-row grid-cols-10 gap-7">
-
         {character?.episode.map((episode) => (
-          <button key={episode} className="text-gray-500 ml-4 text-xl list-disc transition-colors duration-200 hover:text-sky-300 select-none"
+          <button
+            key={episode}
+            className="ml-4 select-none list-disc text-xl text-gray-500 transition-colors duration-200 hover:text-sky-300"
           >
             {formatURL(episode)}
           </button>
         ))}
-
       </ul>
-
     </div>
   )
 }

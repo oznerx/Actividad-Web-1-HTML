@@ -10,7 +10,9 @@ export default async function Favorites() {
       <Header />
       <div>
         {Array.isArray(characters) && characters.length == 0 && (
-          <h1 className="flex text-gray-400 justify-center text-6xl ml-5">Add some characters to favorites!</h1>
+          <h1 className="ml-5 flex justify-center text-6xl text-gray-400">
+            Add some characters to favorites!
+          </h1>
         )}
 
         <div className="grid grid-flow-row grid-cols-3 p-4">

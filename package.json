@@ -1,0 +1,20 @@
+{
+  "name": "html-class-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm exec vercel build --yes --prod",
+    "deploy": "npm exec vercel deploy --prebuilt --prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "vercel": "^34.2.0"
+  },
+  "packageManager": "npm@10.2.3"
+}

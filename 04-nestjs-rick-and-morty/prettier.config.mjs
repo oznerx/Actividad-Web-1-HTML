@@ -2,7 +2,7 @@
 const config = {
   singleQuote: false,
   semi: false,
-  plugins: ['prettier-plugin-tailwindcss'],
+  plugins: ["prettier-plugin-tailwindcss"],
   jsxSingleQuote: false,
 }
 
