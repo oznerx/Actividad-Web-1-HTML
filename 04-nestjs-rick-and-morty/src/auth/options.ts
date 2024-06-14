@@ -1,14 +1,14 @@
-import { NextAuthConfig } from 'next-auth'
+import { NextAuthConfig } from "next-auth"
 
 export const nextAuthConfig: NextAuthConfig = {
   trustHost: true,
   session: {
-    strategy: 'jwt',
+    strategy: "jwt",
   },
   // configure and create the following pages
   pages: {
-    signIn: '/login', // route to customize your login page
-    newUser: '/register', // route to customize your login page
+    signIn: "/login", // route to customize your login page
+    newUser: "/register", // route to customize your login page
   },
   callbacks: {
     authorized({
@@ -23,12 +23,12 @@ export const nextAuthConfig: NextAuthConfig = {
        * to view this page
        * @return false if user is not authenticated, do the same for all routes you want to protect
        */
-      if (pathname === '/dashboard') return !!auth?.user
+      if (pathname === "/dashboard") return !!auth?.user
       return true
     },
     async jwt({ token, user: jwtUser, trigger }) {
       // add values to the token
-      if (trigger === 'signIn') {
+      if (trigger === "signIn") {
         token.id = jwtUser.id
       }
 
